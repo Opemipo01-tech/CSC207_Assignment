@@ -5,7 +5,11 @@ int main() {
     int number;
 
     cout << "Enter a number: ";
-    cin >> number;
+
+    if (!(cin >> number)) {
+        cout << "Invalid input. Please enter a whole number." << endl;
+        return 1;
+    }
 
     if (number % 2 == 0) {
         cout << number << " is Even." << endl;
